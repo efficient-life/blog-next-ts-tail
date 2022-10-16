@@ -29,6 +29,19 @@ import { MAYUR, RUPALI } from './_BLOG_SETUP';
     }
 }
  */
+import { fetchArticles } from '../lib/api';
+export async function getStaticProps() {
+    const { articles, total } = await fetchArticles();
+
+    // return {
+    //     props: {
+    //         app,
+    //         categories,
+    //         articles,
+    //         total,
+    //     },
+    // };
+}
 
 // clear this article list and add your own
 const ARTICLES_LIST: iArticle[] = [
